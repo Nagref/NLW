@@ -14,8 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
         rel="stylesheet">
-       
-       <script src="/scripts/addField.js" defer></script>
+
+    <script src="/scripts/addField.js" defer></script>
 </head>
 
 <body id="page-give-classes">
@@ -36,7 +36,7 @@
         </header>
 
         <main>
-            <form action="" id="create-class">
+            <form action="/save-classes" id="create-class" method="POST">
                 <fieldset>
                     <legend>Seus dados</legend>
 
@@ -90,7 +90,7 @@
                         <button type="button" id="add-time">+ Novo Horário</button>
                     </legend>
 
-                   
+
                     <div class="schedule-item">
 
                         <div class="select-block">
@@ -98,11 +98,11 @@
                             <select name="weekday[]" required>
                                 <option value="">Selecione uma opção</option>
                                 {%for weekday in weekdays %}
-                            <option value="{{loop.index0}}">
-                                {{weekday}}
-                            </option>
+                                <option value="{{loop.index0}}">
+                                    {{weekday}}
+                                </option>
 
-                            {%endfor%}
+                                {%endfor%}
                             </select>
                         </div>
 
